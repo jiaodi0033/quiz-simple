@@ -2,9 +2,12 @@
 // * 给下这段的代码加上 TypeScript 类型声明，以便更好地使用数据。
 
 // * ---------------- 请补充……
+interface myFunc{
+  ()
+};
 
-const getData = async () =>
-  await fetch('https://jsonplaceholder.typicode.com/todos/').then((response) => response.json());
+const getData:myFunc = async () =>
+    await fetch('https://jsonplaceholder.typicode.com/todos/').then((response) => response.json());
 
 getData().then((e) => console.log(e));
 

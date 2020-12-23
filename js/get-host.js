@@ -5,6 +5,9 @@
  */
 const getHostName = (url) => {
   // 请实现……
+  const rex = /(?<=:\/\/).*?(?=\/cn)/;
+  const host = url.match(rex);
+  return host[0];
 };
 
 // * ---------------- 实现的效果：

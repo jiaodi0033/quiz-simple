@@ -7,6 +7,21 @@
  */
 const getSumOfTriple = (arr, start, end) => {
   // 请实现……
+  let sum = 0;
+  let startIndex = arr.indexOf(start);
+  let endIndex = arr.indexOf(end)+1;
+  if(!start||!end){
+    startIndex = 0;
+    endIndex = arr.length;
+  }
+  console.log(startIndex,endIndex)
+  for (let i=startIndex;i<endIndex;i++){
+    if (arr[i]%3===0){
+      sum = sum+arr[i]
+    }
+  }
+  return sum;
+
 };
 
 // * ---------------- 实现的效果：
@@ -26,5 +41,5 @@ const getSumOfTriple = (arr, start, end) => {
   // 203, 210, 217, 224, 231, 238, ..., 455, 462, 469, 476, 483, 490, 497
   //      210            231       ...       462            483
 
-  console.log(getSumOfTriple(arr, 200, 500)); // => 4851
+  console.log(getSumOfTriple(arr, 210, 497)); // => 4851
 }

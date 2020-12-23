@@ -28,4 +28,5 @@ const getLoglevel = () => {
 };
 ```
 
-答：
+答：返回localStorage.loglevel，如果localStorage.loglevel不存在返回INFO
+
